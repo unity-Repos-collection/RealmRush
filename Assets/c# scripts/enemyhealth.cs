@@ -6,6 +6,7 @@ public class enemyhealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] int maxhealth = 5;
+    
     [SerializeField] int currenthitpoints; 
     void OnEnable()
     {
