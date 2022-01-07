@@ -1990,8 +1990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9867f6e769ad2444ab0f1a89a14706b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingbalance: 150
-  currentbalance: 0
+  startingBalance: 150
+  currentBalance: 0
+  restartTime: 5
 --- !u!4 &1574912066
 Transform:
   m_ObjectHideFlags: 0
