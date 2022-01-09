@@ -6,18 +6,8 @@ using UnityEngine.SceneManagement;
 public class ui_handler : MonoBehaviour
 {   
     [SerializeField] bool start;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    [SerializeField] bool restart;
+    [SerializeField] bool quit;
     public void startbutton(bool uibutton)
     {
         start = uibutton;
@@ -26,4 +16,24 @@ public class ui_handler : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+    public void restartbutton(bool restartbutton)
+    {
+        restart = restartbutton;
+        if (restartbutton == true)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    public void quitbutton(bool quitbutton)
+    {
+        quit = quitbutton;
+        if (quitbutton == true)
+        {
+            Application.Quit();
+        }
+    }
+
+
 }
+
