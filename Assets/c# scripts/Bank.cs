@@ -9,7 +9,7 @@ public class Bank : MonoBehaviour
     [SerializeField] int currentBalance;
     public int CurrentBalance {get {return currentBalance; } }
     
-    [SerializeField] float restartTime = 5f;
+    
     void Awake()
     {
         currentBalance = startingBalance;
