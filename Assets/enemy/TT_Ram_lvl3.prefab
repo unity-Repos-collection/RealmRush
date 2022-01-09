@@ -504,11 +504,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491260}
-  - component: {fileID: 1022046882728200454}
   - component: {fileID: 4899073312229922712}
   - component: {fileID: -2614765671255561944}
   - component: {fileID: 1785681389910703978}
   - component: {fileID: 4134292892734302115}
+  - component: {fileID: 5622107715199479462}
   m_Layer: 0
   m_Name: TT_Ram_lvl3
   m_TagString: Untagged
@@ -534,25 +534,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1022046882728200454
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791260}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: f12ccf2dde6cbfc4286328da366c9c8d, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4899073312229922712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: []
   speed: 1
+  anim: {fileID: 0}
 --- !u!114 &1785681389910703978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +590,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5, z: 2.5}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &5622107715199479462
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5a75d5fd14c09ba4283a97af8b5c8b7e, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1022046882720791262
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022046882720491262}
   - component: {fileID: 1022046882723968962}
+  - component: {fileID: 3198779372094241060}
   m_Layer: 0
   m_Name: TT_Ram_lvl3
   m_TagString: Untagged
@@ -701,3 +703,19 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: -0.33615667, z: 1.1266298}
     m_Extent: {x: 1.44132, y: 1.8510416, z: 1.127739}
   m_DirtyAABB: 0
+--- !u!111 &3198779372094241060
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791262}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
