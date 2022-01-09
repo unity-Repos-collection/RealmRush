@@ -5786,6 +5786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0ff5ed522d4ce40b49b9afb469618f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 4708478899284880129}
+  weapon: {fileID: 4708478899284880141}
   projectileParticles: {fileID: 7365620596334479245}
   range: 15
