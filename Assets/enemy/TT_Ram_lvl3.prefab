@@ -138,7 +138,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491240}
-  - component: {fileID: 310753135088495775}
   m_Layer: 0
   m_Name: BONE_wheel 1
   m_TagString: Untagged
@@ -160,19 +159,6 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310753135088495775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatespeed: 0.5
 --- !u!1 &1022046882720791242
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +168,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491242}
-  - component: {fileID: 3513852310673263286}
   m_Layer: 0
   m_Name: BONE_wheel
   m_TagString: Untagged
@@ -204,19 +189,6 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3513852310673263286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatespeed: 0.5
 --- !u!1 &1022046882720791244
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +444,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491252}
-  - component: {fileID: 4140647902960907293}
   m_Layer: 0
   m_Name: BONE_wheel 3
   m_TagString: Untagged
@@ -494,19 +465,6 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4140647902960907293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatespeed: 0.5
 --- !u!1 &1022046882720791254
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +474,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491254}
-  - component: {fileID: 266880157243353155}
   m_Layer: 0
   m_Name: BONE_wheel 2
   m_TagString: Untagged
@@ -538,19 +495,6 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &266880157243353155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatespeed: 0.5
 --- !u!1 &1022046882720791260
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,6 +56,7 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+        animateram.playanim();
         enemy.stealgold();
         gameObject.SetActive(false); 
         

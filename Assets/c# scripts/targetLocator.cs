@@ -16,11 +16,10 @@ public class targetLocator : MonoBehaviour
         animateballista = GetComponent<animateballista>();    
     }
     void Update()
-    {
-        findclosesttarget();
-        aimweapon();
-
+    {   
+        checkforenemyandfire();
     }
+    
     void findclosesttarget()
     {
         enemy[] enemies =FindObjectsOfType<enemy>();
@@ -37,6 +36,7 @@ public class targetLocator : MonoBehaviour
         }
         target = closestTarget;
     }
+    
     void aimweapon()
     {   
         float targetDistance = Vector3.Distance(transform.position, target.position);
@@ -53,10 +53,24 @@ public class targetLocator : MonoBehaviour
            animateballista.stopanimball(); 
         }
     }
+    
     void Attack(bool isActive)
     {
         var emissionModule = projectileParticles.emission;
         emissionModule.enabled = isActive;
+    }
+
+    void checkforenemyandfire()
+    {
+        if (FindObjectOfType<enemy>() !=null)
+        {
+            findclosesttarget();
+            aimweapon();
+        }
+        else
+        {
+            Attack(false);
+        }
     }
 
 }

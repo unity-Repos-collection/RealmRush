@@ -5,7 +5,7 @@ using UnityEngine;
 public class animateram : MonoBehaviour
 {
     
-    [SerializeField ]Animation anim;
+    [SerializeField ] Animation anim;
     
     // Start is called before the first frame update
     void Start()
@@ -24,15 +24,10 @@ public class animateram : MonoBehaviour
 
     public void playanim()
     {   
-        
-        anim.Play("ram_02_move");
+        anim.Play("ram_03_attack");
         
     }
-    public void stopanimation()
-    {   
-        
-        anim.Stop("ram_02_move");
-    } 
+   
     
 
     
