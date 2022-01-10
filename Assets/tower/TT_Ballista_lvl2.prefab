@@ -5393,6 +5393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4708478899284880129}
   - component: {fileID: 4708478899290061325}
+  - component: {fileID: 795115821961032270}
   m_Layer: 0
   m_Name: TT_Ballista_lvl2
   m_TagString: Untagged
@@ -5480,6 +5481,25 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000059604645, y: -0.15845591, z: 0.7767734}
     m_Extent: {x: 1.4256749, y: 1.4071438, z: 0.777746}
   m_DirtyAABB: 0
+--- !u!95 &795115821961032270
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4708478899284850529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5260279d5ce33bd4ba8c772929f345b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4708478899284850531
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,9 +5731,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4708478899284880141}
-  - component: {fileID: 4708478899294225605}
   - component: {fileID: 3925097828164330295}
   - component: {fileID: 2902668851348856519}
+  - component: {fileID: 6953324225983042514}
+  - component: {fileID: 5622079799820666695}
   m_Layer: 0
   m_Name: TT_Ballista_lvl2
   m_TagString: Untagged
@@ -5742,25 +5763,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4708478899294225605
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4708478899284850541}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6a1a8063f7921bf468bd5da00bfe7e5f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3925097828164330295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5789,3 +5791,32 @@ MonoBehaviour:
   weapon: {fileID: 4708478899284880141}
   projectileParticles: {fileID: 7365620596334479245}
   range: 15
+--- !u!111 &6953324225983042514
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4708478899284850541}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 11a53be6f76dccb4c9da9137dbc365dc, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 11a53be6f76dccb4c9da9137dbc365dc, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &5622079799820666695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4708478899284850541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c4af0829386dc4b85fa44c525e0f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animball: {fileID: 6953324225983042514}

@@ -89,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022046882720791236}
   m_LocalRotation: {x: 0.00000004371131, y: 0.00000028212997, z: 1, w: -0.00000023841858}
-  m_LocalPosition: {x: -0.85805345, y: 0.5677103, z: -0.00000019378662}
+  m_LocalPosition: {x: -0.761, y: 0.568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1022046882720491238}
@@ -138,6 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491240}
+  - component: {fileID: 310753135088495775}
   m_Layer: 0
   m_Name: BONE_wheel 1
   m_TagString: Untagged
@@ -159,6 +160,19 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310753135088495775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatespeed: 0.5
 --- !u!1 &1022046882720791242
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491242}
+  - component: {fileID: 3513852310673263286}
   m_Layer: 0
   m_Name: BONE_wheel
   m_TagString: Untagged
@@ -189,6 +204,19 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3513852310673263286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatespeed: 0.5
 --- !u!1 &1022046882720791244
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491252}
+  - component: {fileID: 4140647902960907293}
   m_Layer: 0
   m_Name: BONE_wheel 3
   m_TagString: Untagged
@@ -465,6 +494,19 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4140647902960907293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatespeed: 0.5
 --- !u!1 &1022046882720791254
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022046882720491254}
+  - component: {fileID: 266880157243353155}
   m_Layer: 0
   m_Name: BONE_wheel 2
   m_TagString: Untagged
@@ -495,6 +538,19 @@ Transform:
   m_Father: {fileID: 1022046882720491234}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266880157243353155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59bd3d51ddca5c4f86b9c75b9004dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatespeed: 0.5
 --- !u!1 &1022046882720791260
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +564,8 @@ GameObject:
   - component: {fileID: -2614765671255561944}
   - component: {fileID: 1785681389910703978}
   - component: {fileID: 4134292892734302115}
-  - component: {fileID: 5622107715199479462}
+  - component: {fileID: 8957633038326573792}
+  - component: {fileID: 6462670378692088812}
   m_Layer: 0
   m_Name: TT_Ram_lvl3
   m_TagString: Untagged
@@ -562,7 +619,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: []
   speed: 1
-  anim: {fileID: 0}
 --- !u!114 &1785681389910703978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,25 +646,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5, z: 2.5}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!95 &5622107715199479462
-Animator:
-  serializedVersion: 3
+--- !u!114 &8957633038326573792
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022046882720791260}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5a75d5fd14c09ba4283a97af8b5c8b7e, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd8844b0f9cc364fa9ee6b4d4a984dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 6462670378692088812}
+--- !u!111 &6462670378692088812
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022046882720791260}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 5df161f5bcfc1314fb0cdd84b79c9091, type: 2}
+  - {fileID: 7400000, guid: 2f710483c91f76c4ba4b0f144a265bfc, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1022046882720791262
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +686,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1022046882720491262}
   - component: {fileID: 1022046882723968962}
-  - component: {fileID: 3198779372094241060}
   m_Layer: 0
   m_Name: TT_Ram_lvl3
   m_TagString: Untagged
@@ -703,19 +769,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: -0.33615667, z: 1.1266298}
     m_Extent: {x: 1.44132, y: 1.8510416, z: 1.127739}
   m_DirtyAABB: 0
---- !u!111 &3198779372094241060
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022046882720791262}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 8d599a1d36bf80b4495953ef62dbb050, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0

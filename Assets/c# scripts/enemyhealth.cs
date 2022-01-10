@@ -32,7 +32,7 @@ public class enemyhealth : MonoBehaviour
         {
             gameObject.SetActive(false); 
             enemy.rewardgold();   
-            Debug.Log("destroyed");
+            //Debug.Log("destroyed");
         }
 
     }

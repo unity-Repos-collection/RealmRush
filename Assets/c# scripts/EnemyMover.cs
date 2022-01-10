@@ -7,21 +7,20 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField] [Range(0f,5f)] float speed = 1f;
     
-    public Animator anim;
+    animateram animateram;
     enemy enemy;
     void OnEnable()
     {
         findpath();
         returntostart();
         StartCoroutine (FollowPath());
+         
     }
-
     void Start() 
     {
-        enemy = GetComponent<enemy>();
-        anim = GetComponent<Animator>();    
+        animateram = GetComponent<animateram>();
+        enemy = GetComponent<enemy>();    
     }
-
     void findpath()
     {   
         path.Clear();
@@ -57,14 +56,11 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        playanim();
         enemy.stealgold();
         gameObject.SetActive(false); 
+        
     } 
 
-    void playanim()
-    {
-        anim.Play("ram_03_attack", 2);
-    } 
+    
     
 }

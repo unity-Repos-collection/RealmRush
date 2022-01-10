@@ -7,9 +7,14 @@ public class targetLocator : MonoBehaviour
     [SerializeField] Transform weapon;
     [SerializeField] ParticleSystem projectileParticles;
     [SerializeField] float range = 15f;
+    animateballista animateballista;
     Transform target; 
     // Start is called before the first frame update
     
+    void OnEnable() 
+    {
+        animateballista = GetComponent<animateballista>();    
+    }
     void Update()
     {
         findclosesttarget();
@@ -40,10 +45,12 @@ public class targetLocator : MonoBehaviour
         if (targetDistance < range)
         {
             Attack(true);
+            animateballista.playanimball();
         }
         else
         {
-           Attack(false); 
+           Attack(false);
+           animateballista.stopanimball(); 
         }
     }
     void Attack(bool isActive)
