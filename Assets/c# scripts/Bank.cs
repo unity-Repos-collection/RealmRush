@@ -29,8 +29,9 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             Debug.Log("game over");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
+
     }
     void updateDisplay()
     {

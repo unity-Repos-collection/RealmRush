@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhealth: 5
-  currenthitpoints: 0
+  difficultyramp: 5
 --- !u!65 &4134292892734302115
 BoxCollider:
   m_ObjectHideFlags: 0

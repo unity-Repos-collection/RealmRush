@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 [ExecuteAlways]
 public class coordinate_labeler : MonoBehaviour
 {   
@@ -28,6 +29,7 @@ public class coordinate_labeler : MonoBehaviour
         Colorcoordinates();
         togglelabels();
     }
+    //debug editor 
     void togglelabels()
     {
         if (Input.GetKeyDown(KeyCode.C))
@@ -49,11 +51,13 @@ public class coordinate_labeler : MonoBehaviour
         
     }
     void DisplayCoordinates()
-    {
+    {   
+        // coordinates is a 2D vector, so Y in coordinates is equal to parents Z transform
+        #if UNITY_EDITOR
         coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
         coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
         label.text = coordinates.x + "," + coordinates.y;
-
+        #endif
     }
 
     void UpdateObjectName()

@@ -8,20 +8,29 @@ public class ui_handler : MonoBehaviour
     [SerializeField] bool start;
     [SerializeField] bool restart;
     [SerializeField] bool quit;
+
+    //work on this 
+    void Start() 
+    {   
+        
+    }
+
     public void startbutton(bool uibutton)
     {
         start = uibutton;
         if (uibutton == true)
         {
-            SceneManager.LoadScene(2);
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
     public void restartbutton(bool restartbutton)
     {
         restart = restartbutton;
         if (restartbutton == true)
-        {
-            SceneManager.LoadScene(2);
+        {   
+            int restartscene = SceneManager.GetActiveScene().buildIndex -1;
+            SceneManager.LoadScene(restartscene);
         }
     }
 

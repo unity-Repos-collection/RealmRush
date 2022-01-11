@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class hud_ui : MonoBehaviour
+public class keyboard_handler : MonoBehaviour
 {
     
     // Start is called before the first frame update
@@ -14,7 +13,15 @@ public class hud_ui : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {   
+        quitgame();
+    }
+    
+    void quitgame()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
