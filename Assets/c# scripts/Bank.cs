@@ -9,7 +9,7 @@ public class Bank : MonoBehaviour
     [SerializeField] TextMeshProUGUI displaybank;
     [SerializeField] int startingBalance = 150;
     [SerializeField] int currentBalance;
-    [SerializeField] int winamount = 250;
+    //[SerializeField] int winamount = 250;
     public int CurrentBalance {get {return currentBalance; } }
     void Awake()
     {
@@ -30,12 +30,12 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             Debug.Log("game over");
-            SceneManager.LoadScene(3);
-        }
-        if(currentBalance == winamount)
-        {
             SceneManager.LoadScene(2);
         }
+        //if(currentBalance == winamount)
+        //{
+            //SceneManager.LoadScene(2);
+        //}
 
     }
     void updateDisplay()

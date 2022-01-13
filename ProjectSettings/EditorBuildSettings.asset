@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl_1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/lvl_2.unity
-    guid: bc19b4d902f88b146b6dec22da26202c
-  - enabled: 1
     path: Assets/Scenes/Lose_game.unity
     guid: 416f9acdf1282d84281d51a9a7446c3c
   m_configObjects: {}
