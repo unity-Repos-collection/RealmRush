@@ -5,9 +5,11 @@ using UnityEngine;
 public class Objectpool : MonoBehaviour
 {   
     public bool stop;
-    [SerializeField] int poolsize = 5;
     [SerializeField] GameObject ram;
-    [SerializeField] float betweenspawns = 2f;
+    [Tooltip("size of pool of enemies")]
+    [SerializeField] [Range(0,50)] int poolsize = 5;
+    [Tooltip("time between enemy instantiations")]
+    [SerializeField] [Range(0.1f,30f)] float betweenspawns = 2f;
 
     GameObject[] pool;  
 

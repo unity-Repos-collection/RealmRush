@@ -5,6 +5,7 @@ using TMPro;
 
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class coordinate_labeler : MonoBehaviour
 {   
     [SerializeField] Color defaultcolor = Color.white;
@@ -16,6 +17,7 @@ public class coordinate_labeler : MonoBehaviour
     {   
         label = GetComponent<TextMeshPro>();
         label.enabled = false;
+
         waypoint = GetComponentInParent<Waypoint>();
         DisplayCoordinates();
     }
@@ -26,7 +28,7 @@ public class coordinate_labeler : MonoBehaviour
             DisplayCoordinates();
             UpdateObjectName();
         } 
-        Colorcoordinates();
+        setlabelcolor();
         togglelabels();
     }
     //debug editor 
@@ -37,7 +39,7 @@ public class coordinate_labeler : MonoBehaviour
             label.enabled = !label.IsActive();
         }
     }
-    void Colorcoordinates()
+    void setlabelcolor()
     {
         if(waypoint.IsPlaceable)
         {

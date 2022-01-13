@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(enemy))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
@@ -39,6 +40,12 @@ public class EnemyMover : MonoBehaviour
     {
         transform.position = path[0].transform.position;
     }
+    void finishpath()
+    {
+        animateram.playanim();
+        enemy.stealgold();
+        gameObject.SetActive(false); 
+    }
     IEnumerator FollowPath() 
     {
         foreach(Waypoint waypoint in path) 
@@ -56,10 +63,8 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        animateram.playanim();
-        enemy.stealgold();
-        gameObject.SetActive(false); 
         
+        finishpath();
     } 
 
     
