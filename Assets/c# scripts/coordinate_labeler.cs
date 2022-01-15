@@ -10,15 +10,17 @@ public class coordinate_labeler : MonoBehaviour
 {   
     [SerializeField] Color defaultcolor = Color.white;
     [SerializeField] Color blockedcolor = Color.grey;
+      [SerializeField] Color exploredcolor = Color.yellow;
+    [SerializeField] Color pathcolor = new Color(1f,0.5f,0f);
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
-    Waypoint waypoint;
+    gridManager gridManager;
     void Awake() 
     {   
+        gridManager = FindObjectOfType<gridManager>();
         label = GetComponent<TextMeshPro>();
-        label.enabled = false;
-
-        waypoint = GetComponentInParent<Waypoint>();
+        label.enabled = true;
+        
         DisplayCoordinates();
     }
     void Update()
@@ -33,21 +35,38 @@ public class coordinate_labeler : MonoBehaviour
     }
     //debug editor 
     void togglelabels()
-    {
+    {   
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             label.enabled = !label.IsActive();
         }
+        
+        
     }
     void setlabelcolor()
-    {
-        if(waypoint.IsPlaceable)
+    {   
+        if (gridManager == null) {return;}
+
+        node node = gridManager.getnode(coordinates);
+
+        if (node == null) {return;}
+
+        if (!node.isWalkable)
         {
-            label.color = defaultcolor;  
+            label.color = blockedcolor;
+        }
+        else if (node.isPath)
+        {
+            label.color = pathcolor;
+        }
+        else if (node.isExplored)
+        {
+            label.color = exploredcolor;
         }
         else
         {
-            label.color = blockedcolor;
+            label.color = defaultcolor;
         }
 
         
@@ -55,11 +74,11 @@ public class coordinate_labeler : MonoBehaviour
     void DisplayCoordinates()
     {   
         // coordinates is a 2D vector, so Y in coordinates is equal to parents Z transform
-        #if UNITY_EDITOR
+        
         coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
         coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
         label.text = coordinates.x + "," + coordinates.y;
-        #endif
+        
     }
 
     void UpdateObjectName()

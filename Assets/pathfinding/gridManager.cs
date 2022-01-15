@@ -12,6 +12,14 @@ public class gridManager : MonoBehaviour
     {
         creategrid();
     }
+    public node getnode(Vector2Int coordinates)
+    {   
+        if (grid.ContainsKey(coordinates))
+        {
+            return grid[coordinates];
+        }
+        return null;
+    }
     void creategrid()
     {
         for (int x = 0; x < gridsize.x; x++)
