@@ -44,10 +44,13 @@ public class ui_handler : MonoBehaviour
             #endif
             #if (UNITY_EDITOR)
                 UnityEditor.EditorApplication.isPlaying = false;
+                Application.OpenURL("https://github.com/Maximus2709");
+                Application.OpenURL("https://www.facebook.com/luca.farci.37/");
             #elif (UNITY_STANDALONE)    
                 Application.Quit();
             #elif (UNITY_WEBGL)   
-                Application.OpenURL("https://github.com/unity-Repos-collection/RealmRush");
+                Application.OpenURL("https://github.com/Maximus2709");
+                Application.OpenURL("https://www.facebook.com/luca.farci.37/");
             #endif
         }
     }
