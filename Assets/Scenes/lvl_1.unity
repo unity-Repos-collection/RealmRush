@@ -14187,7 +14187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a883cd1cca0f6e447816a88e80795e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridsize: {x: 4, y: 3}
+  gridsize: {x: 2, y: 1}
 --- !u!4 &1250907013
 Transform:
   m_ObjectHideFlags: 0
@@ -18133,6 +18133,14 @@ PrefabInstance:
     - target: {fileID: 4778378162247807614, guid: b5b2bc62de0ce7446b698be77928aeb6, type: 3}
       propertyPath: m_text
       value: 1,0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778378162247807614, guid: b5b2bc62de0ce7446b698be77928aeb6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778378162247807614, guid: b5b2bc62de0ce7446b698be77928aeb6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8140975032348283062, guid: b5b2bc62de0ce7446b698be77928aeb6, type: 3}
       propertyPath: m_Name
