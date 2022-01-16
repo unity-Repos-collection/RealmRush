@@ -9,10 +9,11 @@ public class ui_handler : MonoBehaviour
     [SerializeField] bool restart;
     [SerializeField] bool quit;
 
-    //work on this 
+    [SerializeField] AudioClip sound;
+    AudioSource As;
     void Start() 
     {   
-        
+        As = GetComponent<AudioSource>();
     }
 
     public void startbutton(bool uibutton)
@@ -20,6 +21,7 @@ public class ui_handler : MonoBehaviour
         start = uibutton;
         if (uibutton == true)
         {
+            playclicksound();
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(nextSceneIndex);
         }
@@ -29,6 +31,7 @@ public class ui_handler : MonoBehaviour
         restart = restartbutton;
         if (restartbutton == true)
         {   
+            playclicksound();
             int restartscene = SceneManager.GetActiveScene().buildIndex -1;
             SceneManager.LoadScene(restartscene);
         }
@@ -39,20 +42,24 @@ public class ui_handler : MonoBehaviour
         quit = quitbutton;
         if (quitbutton == true)
         {   
+            playclicksound();
             #if (UNITY_EDITOR || DEVELOPMENT_BUILD)
                 Debug.Log(this.name+" : "+this.GetType()+" : "+System.Reflection.MethodBase.GetCurrentMethod().Name); 
             #endif
             #if (UNITY_EDITOR)
                 UnityEditor.EditorApplication.isPlaying = false;
                 Application.OpenURL("https://github.com/Maximus2709");
-                Application.OpenURL("https://www.facebook.com/luca.farci.37/");
             #elif (UNITY_STANDALONE)    
                 Application.Quit();
             #elif (UNITY_WEBGL)   
                 Application.OpenURL("https://github.com/Maximus2709");
-                Application.OpenURL("https://www.facebook.com/luca.farci.37/");
             #endif
         }
+    }
+    void playclicksound()
+    {
+        As.Stop();
+        As.PlayOneShot(sound);
     }
 }
 
