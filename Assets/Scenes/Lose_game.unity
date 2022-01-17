@@ -202,7 +202,6 @@ GameObject:
   - component: {fileID: 445788312}
   - component: {fileID: 445788311}
   - component: {fileID: 445788315}
-  - component: {fileID: 445788316}
   - component: {fileID: 445788317}
   m_Layer: 5
   m_Name: Canvas
@@ -310,18 +309,6 @@ MonoBehaviour:
   restart: 0
   quit: 0
   sound: {fileID: 8300000, guid: 2e071f5b8b8467d45a5e6e24c23c6ad4, type: 3}
---- !u!114 &445788316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445788310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49c91f29eb911245ab5f5c5c311a3ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &445788317
 AudioSource:
   m_ObjectHideFlags: 0
@@ -430,6 +417,7 @@ GameObject:
   - component: {fileID: 512603325}
   - component: {fileID: 512603324}
   - component: {fileID: 512603327}
+  - component: {fileID: 512603328}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -598,6 +586,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &512603328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512603323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49c91f29eb911245ab5f5c5c311a3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &618097973
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ui_handler : MonoBehaviour
 {   
@@ -9,11 +10,26 @@ public class ui_handler : MonoBehaviour
     [SerializeField] bool restart;
     [SerializeField] bool quit;
 
+    [SerializeField] Animation anim;
+    
+    [SerializeField] RawImage blackimage;
     [SerializeField] AudioClip sound;
     AudioSource As;
-    void Start() 
-    {   
+    float fadedelay = 1f;
+
+    void Awake() 
+    {
         As = GetComponent<AudioSource>();
+        anim = GetComponent<Animation>();
+    }
+    
+    void Start() 
+    {  
+        StartCoroutine(playfadeanim());
+    }
+    void Update() 
+    {
+        
     }
 
     public void startbutton(bool uibutton)
@@ -61,5 +77,16 @@ public class ui_handler : MonoBehaviour
         As.Stop();
         As.PlayOneShot(sound);
     }
+    
+    public IEnumerator playfadeanim()
+    {
+        anim.Play("fade");
+
+        yield return new WaitForSeconds(fadedelay);
+
+        blackimage.enabled = false;
+
+    }
+  
 }
 
