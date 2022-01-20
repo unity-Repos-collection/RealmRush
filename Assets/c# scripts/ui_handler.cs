@@ -9,26 +9,25 @@ public class ui_handler : MonoBehaviour
     [SerializeField] bool start;
     [SerializeField] bool restart;
     [SerializeField] bool quit;
-
-    [SerializeField] Animation anim;
-    
-    [SerializeField] RawImage blackimage;
     [SerializeField] AudioClip sound;
+    
+    fade fade;
+    
     AudioSource As;
-    float fadedelay = 1f;
+    
 
     void Awake() 
     {
         As = GetComponent<AudioSource>();
-        anim = GetComponent<Animation>();
+        fade = GetComponent<fade>();
     }
     
     void Start() 
     {  
-        StartCoroutine(playfadeanim());
     }
     void Update() 
     {
+        fade.fadeto();
         
     }
 
@@ -36,9 +35,11 @@ public class ui_handler : MonoBehaviour
     {
         start = uibutton;
         if (uibutton == true)
-        {
+        {   
+            
             playclicksound();
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            
             SceneManager.LoadScene(nextSceneIndex);
         }
     }
@@ -77,16 +78,5 @@ public class ui_handler : MonoBehaviour
         As.Stop();
         As.PlayOneShot(sound);
     }
-    
-    public IEnumerator playfadeanim()
-    {
-        anim.Play("fade");
-
-        yield return new WaitForSeconds(fadedelay);
-
-        blackimage.enabled = false;
-
-    }
-  
 }
 
