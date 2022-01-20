@@ -36,7 +36,7 @@ public class ui_handler : MonoBehaviour
         start = uibutton;
         if (uibutton == true)
         {   
-            
+            fade.fadeto();
             playclicksound();
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
             
