@@ -912,7 +912,7 @@ MonoBehaviour:
   textmeshpro: {fileID: 227987545}
   backgroundcolor: {r: 1, g: 0, b: 0.3254902, a: 1}
   textcolor: {r: 0.9622642, g: 0.88771486, b: 0.040850822, a: 1}
-  lerpTime: 0.001
+  lerpTime: 0.0001
   canvas: {fileID: 748121615}
 --- !u!1 &1315591163
 GameObject:

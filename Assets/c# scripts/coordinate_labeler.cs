@@ -5,8 +5,11 @@ using TMPro;
 
 [ExecuteAlways]
 [RequireComponent(typeof(TextMeshPro))]
+
 public class coordinate_labeler : MonoBehaviour
+
 {
+    
     [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
     [SerializeField] Color exploredColor = Color.yellow;
@@ -19,7 +22,7 @@ public class coordinate_labeler : MonoBehaviour
     void Awake() {
         gridManager = FindObjectOfType<gridManager>();
         label = GetComponent<TextMeshPro>();
-        label.enabled = true;
+        label.enabled = false;
 
         DisplayCoordinates();
     }
@@ -38,15 +41,21 @@ public class coordinate_labeler : MonoBehaviour
     }
 
     void ToggleLabels()
-    {
+    {   
+        #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.C))
         {
             label.enabled = !label.IsActive();
         }
+        #endif
+        
     }
 
     void SetLabelColor()
-    {
+    {   
+        
+            
+        
         if(gridManager == null) { return; }
 
         node node = gridManager.getnode(coordinates);
@@ -73,16 +82,20 @@ public class coordinate_labeler : MonoBehaviour
 
     void DisplayCoordinates() 
     {   
-        #if (UNITY_EDITOR)
+        // note to self leave directives alone
+        #if UNITY_EDITOR
         coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
         coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
-        #endif       
+        #endif   
         label.text = coordinates.x + "," + coordinates.y;
     }
 
     void UpdateObjectName()
-    {
+    {   
+        
         transform.parent.name = coordinates.ToString();
+       
     }
+    
 }
 

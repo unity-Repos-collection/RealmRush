@@ -592,7 +592,7 @@ MonoBehaviour:
   textmeshpro: {fileID: 1203746641}
   backgroundcolor: {r: 0.004538993, g: 0.17426647, b: 0.9622642, a: 1}
   textcolor: {r: 1, g: 0.97090614, b: 0.0141509175, a: 1}
-  lerpTime: 0.001
+  lerpTime: 0.0001
   canvas: {fileID: 808912599}
 --- !u!82 &808912603
 AudioSource:

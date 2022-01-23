@@ -28,7 +28,9 @@ public class keyboard_handler : MonoBehaviour
     //debug keyboard keys
     //TODO remove from builds 
     void togglesound()
-    {
+    {   
+        
+        
         if (Input.GetKey(KeyCode.S))
         {
             As.enabled = false;
@@ -36,6 +38,7 @@ public class keyboard_handler : MonoBehaviour
         else if(Input.GetKey(KeyCode.D))
         {
             As.enabled = true;
-        }  
+        } 
+         
     }
 }
