@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,12 +18,15 @@ public class ui_handler : MonoBehaviour
 
     void Awake() 
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60; 
         As = GetComponent<AudioSource>();
         fade = GetComponent<fade>();
     }
     
     void Start() 
     {  
+        
     }
     void Update() 
     {

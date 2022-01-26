@@ -8,19 +8,18 @@ using TMPro;
 public class fade : MonoBehaviour
 {  
     [SerializeField] Image background;
-    
-    [SerializeField] TextMeshProUGUI textmeshpro; 
     [SerializeField] Color backgroundcolor;
     [SerializeField] Color textcolor;
-    [SerializeField] [Range(0f,1f)] float lerpTime;
     [SerializeField] Canvas canvas;
+    [SerializeField] float lerpTime = 0.5f;
     
-    
+    TextMeshProUGUI [] textlist;
     void Awake() 
     {
         canvas = GetComponent<Canvas>();
+
+        textlist = GetComponentsInChildren<TextMeshProUGUI>();
         background = GetComponentInChildren<Image>(); 
-        textmeshpro = GetComponentInChildren<TextMeshProUGUI>();
         canvas.enabled = true;
     }
     
@@ -28,8 +27,11 @@ public class fade : MonoBehaviour
     {   
         if(canvas.enabled == true)
         {
-        background.color = Color.Lerp(background.color, backgroundcolor, lerpTime);
-        textmeshpro.color = Color.Lerp(textmeshpro.color, textcolor, lerpTime); 
+            background.color = Color.Lerp(background.color, backgroundcolor,Mathf.PingPong(Time.time, lerpTime));
+            foreach(TextMeshProUGUI text in textlist)
+            {
+                text.color = Color.Lerp(text.color, textcolor, lerpTime);
+            }    
         }
         else
         {
