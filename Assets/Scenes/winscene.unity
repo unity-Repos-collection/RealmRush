@@ -478,8 +478,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278903541
+  m_fontColor: {r: 0.9607843, g: 0.8862745, b: 0.039215688, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -612,8 +612,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278903541
+  m_fontColor: {r: 0.9607843, g: 0.8862745, b: 0.039215688, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -695,6 +695,7 @@ GameObject:
   - component: {fileID: 748121612}
   - component: {fileID: 748121617}
   - component: {fileID: 748121618}
+  - component: {fileID: 748121619}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -908,11 +909,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a4e74bd96867d44ad58cf526c2f7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeintime: 1
+  fadeouttime: 2
+  fadedelay: 3
   background: {fileID: 1393447747}
   backgroundcolor: {r: 1, g: 0, b: 0.3254902, a: 1}
   textcolor: {r: 0.9622642, g: 0.88771486, b: 0.040850822, a: 1}
   canvas: {fileID: 748121615}
-  lerpTime: 0.5
+--- !u!225 &748121619
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748121611}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1315591163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.3254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

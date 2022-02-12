@@ -10,12 +10,8 @@ public class ui_handler : MonoBehaviour
     [SerializeField] bool restart;
     [SerializeField] bool quit;
     [SerializeField] AudioClip sound;
-    
     fade fade;
-    
     AudioSource As;
-    
-
     void Awake() 
     {
         QualitySettings.vSyncCount = 0;
@@ -26,11 +22,10 @@ public class ui_handler : MonoBehaviour
     
     void Start() 
     {  
-        
+        StartCoroutine(fade.lerpalphaIn());
     }
     void Update() 
     {
-        fade.fadeto();
         
     }
 
@@ -39,11 +34,10 @@ public class ui_handler : MonoBehaviour
         start = uibutton;
         if (uibutton == true)
         {   
-            fade.fadeto();
+            StartCoroutine(fade.colorlerpout());
             playclicksound();
-            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            Invoke(nameof(nextscene),fade.fadedelay);
             
-            SceneManager.LoadScene(nextSceneIndex);
         }
     }
     public void restartbutton(bool restartbutton)
@@ -52,8 +46,7 @@ public class ui_handler : MonoBehaviour
         if (restartbutton == true)
         {   
             playclicksound();
-            int restartscene = SceneManager.GetActiveScene().buildIndex -1;
-            SceneManager.LoadScene(restartscene);
+            restartscene();
         }
     }
 
@@ -81,5 +74,17 @@ public class ui_handler : MonoBehaviour
         As.Stop();
         As.PlayOneShot(sound);
     }
+
+    void nextscene()
+    {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+    void restartscene()
+    {
+        int restartscene = SceneManager.GetActiveScene().buildIndex -1;
+        SceneManager.LoadScene(restartscene);
+    }
+
 }
 
