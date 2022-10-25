@@ -64,8 +64,8 @@ public class ui_handler : MonoBehaviour
                 UnityEditor.EditorApplication.isPlaying = false;
             #elif (UNITY_STANDALONE)    
                 Application.Quit();
-            #elif (UNITY_WEBGL)   
-                Application.Quit();
+            #elif (UNITY_WEBGL)
+                Application.OpenURL("https://lucashousestudios.co.uk/unity.html");   
             #endif
         }
     }
