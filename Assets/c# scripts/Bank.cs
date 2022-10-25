@@ -34,7 +34,7 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             Debug.Log("game over");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
        
 
@@ -47,7 +47,7 @@ public class Bank : MonoBehaviour
     {
         if(currentBalance >= 175)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         } 
     }
 }
