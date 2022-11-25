@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 34e7d23eaa98a284ba7c90db012dbe37, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37482774, g: 0.6137253, b: 0.8661903, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -704,6 +704,67 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1001 &983076538
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1863378661014468, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_Name
+      value: WebMonetizationBroadcaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779211102405342, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567501363096764, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
+      propertyPath: paymentPointer
+      value: $ilp.uphold.com/iMgyQp98qMLX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56ec2a799ece14320bf50376441bd622, type: 3}
 --- !u!1 &1203746639
 GameObject:
   m_ObjectHideFlags: 0

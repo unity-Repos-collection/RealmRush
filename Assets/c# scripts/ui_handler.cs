@@ -14,8 +14,7 @@ public class ui_handler : MonoBehaviour
     AudioSource As;
     void Awake() 
     {
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60; 
+        Application.targetFrameRate = -1;
         As = GetComponent<AudioSource>();
         fade = GetComponent<fade>();
     }
